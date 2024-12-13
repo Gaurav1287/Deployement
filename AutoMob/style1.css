@@ -1,0 +1,393 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header Styling */
+#home {
+     
+    background: url('back.png') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    height: 520px;
+    margin:2px;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+#home h2 {
+
+    padding-top:60px; 
+    font-size: 36px;
+    position: relative;
+    z-index: 1;
+}
+
+#home p {
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    background-color: #03C1C0;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+header .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size:20px;
+    font-weight: bold; 
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    form {
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+.logoImg
+{
+    height:60px;
+    width: 60px;
+    border-radius: 50px;
+
+}
+/* About Section Styling */
+#about {
+    margin:15px; 
+    display: flex;
+    
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    flex-direction: column;
+}
+
+
+.about-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between; 
+    /*gap: 20px;*/
+}
+
+.about-container img {
+    width: 400px;
+    border-radius: 10px;
+
+}
+.im{
+    margin:20px; 
+    height:250px; 
+}
+
+.about-content {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.about-content h2 {
+    text-decoration: underline;
+    font-size: 28px;
+    padding-right: 120px;
+   /* margin-right:170px; */
+    margin-bottom: 15px;
+}
+
+.about-content p {
+     padding-right: 100px;
+    font-size: 25px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #555;
+    padding-left: 30px;
+}
+
+/* Responsive Design for About Section */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-container img {
+        max-width: 100%;
+    }
+
+    .about-content {
+        max-width: 100%;
+    }
+}
+/* Services Section Styling */
+#services {
+    margin: 15px;
+    padding: 60px 20px;
+    background-color: #f9f9f9; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#services h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 32px; 
+    font-weight: bold
+    margin-bottom: 30px; 
+}
+#services h3
+{
+    text-shadow:4px 6px 7px black; 
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.card-container {
+
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;  
+    justify-content: left; 
+}
+.card {
+    margin-top:2px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    padding: 15px; 
+    width:250px; 
+    /*text-align: center; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    margin-left: 100px;
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.card img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+    margin-bottom: 10px; 
+}
+
+.card h4 {
+    font-size: 20px; 
+    margin-bottom: 8px; 
+    color: #333; 
+}
+
+.card p {
+    font-size: 14px; /* Font size for descriptions */
+    color: #555; /* Medium gray for text */
+    line-height: 1.5; /* Line height for readability */
+}
+
+/* Responsive Design for Services Section */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Stack cards on smaller screens */
+        align-items: center; /* Center align cards */
+    }
+
+    .card {
+        width: 90%; /* Full width on small screens */
+    }
+}
+/* Enquiry Section Styling */
+/**/
+
+/* Contact and Enquiry Section Styling */
+#contact-enquiry {
+    display: flex;
+    gap: 40px;
+    padding: 60px 20px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 99%;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    height: 550px;
+    margin: 10px;
+    border-radius: 10px;
+    margin-bottom: 70px;
+    font-family: Arial;
+}
+
+.contact-us {
+    margin-top: 30px;
+    flex: 1;
+    min-width: 250px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    font-size: 25px;
+    color: white;
+}
+
+.contact-us h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #03C1C0;
+}
+
+.contact-us ul {
+    list-style: none;
+    color: white;
+    padding-top: 20px;
+
+}
+
+.contact-us li {
+    font-size: 20px;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.enquiry {
+    height: 300px;
+    flex: 1;
+    margin-top:5px; 
+    width: 200px;
+    margin-right: 50px;
+    color: white;
+
+}
+
+.enquiry h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #03C1C0;
+}
+.enquiry p{
+    padding-bottom: 5px; 
+    font-size: 25px;
+}
+
+.enquiry form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.enquiry .form-group {
+    text-align: left;
+}
+
+.enquiry form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.enquiry form input, 
+.enquiry form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.enquiry button {
+    background-color: #03C1C0;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width:200px;
+    font-weight: bold; 
+}
+
+.enquiry button:hover {
+    background-color: #029292;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    #contact-enquiry {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-us, .enquiry {
+        width: 100%;
+    }
+}
